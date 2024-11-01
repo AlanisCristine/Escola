@@ -1,16 +1,11 @@
 ﻿using Dapper;
-using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Escola.Repository;
 
 public class InicializadorBD
 {
-    private const string ConnectionString = "Data Source=Supermercado.db";
+    private const string ConnectionString = "Data Source = Escola.db";
 
     public static void Inicializar()
     {
