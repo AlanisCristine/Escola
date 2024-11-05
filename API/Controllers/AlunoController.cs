@@ -27,5 +27,16 @@ namespace API.Controllers
             return _service.Listar();
         }
 
+        [HttpPut("editar-usuario")]
+        public void EditarUsuario(Aluno a)
+        {
+            _service.Editar(a);
+        }
+        [HttpDelete("deletar-usuario")]
+        public void DeletarUsuario(int id)
+        {
+            _service.Remover(id);
+        }
+
     }
 }

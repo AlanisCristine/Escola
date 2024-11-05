@@ -26,5 +26,18 @@ namespace Escola.Service
         {
             return repository.Listar();
         }
+        public void Remover(int id)
+        {
+            repository.Remover(id);
+        }
+        public Aluno BuscarTimePorId(int id)
+        {
+            return repository.BuscarPorId(id);
+        }
+        public void Editar(Aluno editPessoa)
+        {
+            repository.Editar(editPessoa);
+        }
+
     }
 }

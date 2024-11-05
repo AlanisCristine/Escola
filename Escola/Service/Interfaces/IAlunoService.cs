@@ -11,5 +11,8 @@ namespace Escola.Service.Interfaces
     {
         public void Adicionar(Aluno aluno);
         public List<Aluno> Listar();
+        public void Remover(int id);
+        public Aluno BuscarTimePorId(int id);
+        public void Editar(Aluno editPessoa);
     }
 }
