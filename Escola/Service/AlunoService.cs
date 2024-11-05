@@ -1,5 +1,7 @@
 ﻿using Escola.Entidade;
 using Escola.Repository;
+using Escola.Repository.Interfaces;
+using Escola.Service.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -9,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Escola.Service
 {
-    public class AlunoService
+    public class AlunoService : IAlunoService
     {
-        private readonly AlunoRepository repository;
-        public AlunoService(IConfiguration config)
+        private readonly IAlunoRepository repository;
+        public AlunoService(IAlunoRepository aluno)
         {
-            repository = new AlunoRepository(config);
+            repository = aluno;
         }
         public void Adicionar(Aluno aluno)
         {

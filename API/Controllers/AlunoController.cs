@@ -1,5 +1,6 @@
 ﻿using Escola.Entidade;
 using Escola.Service;
+using Escola.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -8,11 +9,11 @@ namespace API.Controllers
     [Route("[controller]")]
     public class AlunoController : ControllerBase
     {
-        private readonly AlunoService _service;
+        private readonly IAlunoService _service;
 
-        public AlunoController(IConfiguration config)
+        public AlunoController(IAlunoService aluno)
         {
-            _service = new AlunoService(config);
+            _service = aluno;
         }
 
         [HttpPost("Adicionar-aluno")]
